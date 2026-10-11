@@ -39,7 +39,7 @@ it turned out just like how i imagined it its so sick
 | 1 | mpu6050 | https://www.aliexpress.us/item/3256807803434052.html?spm=a2g0o.productlist.main.13.36e849223M5YiJ&algo_pvid=72591f86-c8de-4b78-bd96-5fab9a3d11d5&algo_exp_id=72591f86-c8de-4b78-bd96-5fab9a3d11d5-12&pdp_ext_f=%7B%22order%22%3A%222505%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%212.09%211.09%21%21%2113.95%217.29%21%40212a6df517917517700347092e0d6d%2112000046422332178%21sea%21US%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Aa568ec5c%3Bm03_new_user%3A-29895%3BpisId%3A5000000218165385&curPageLogUid=lthkqjsFkiGO&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005007989748804%7C_p_origin_prod%3A | $1.81 |
 | 2 | cherry mx switches | https://www.aliexpress.us/item/3256811880813653.html?spm=a2g0o.productlist.main.1.2d044710fh0nZn&algo_pvid=0cd28c96-432d-43b2-874c-9a3962dca60e&algo_exp_id=0cd28c96-432d-43b2-874c-9a3962dca60e-0&pdp_ext_f=%7B%22order%22%3A%22299%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%215.13%211.09%21%21%215.13%211.09%21%40212a6df517917522203607560e0e12%2112000057415897655%21sea%21US%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Aa568ec5c%3Bm03_new_user%3A-29895%3BpisId%3A5000000218165385&curPageLogUid=oSDRBrAhvjx1&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005012067128405%7C_p_origin_prod%3A | 1.26$ |
 | ? | PLA plastic for 3d printing |  | ?$ |
-|  | total |  | >61.14$|
+|  | total |  | >30.14$|
 
 # How to build:
 
