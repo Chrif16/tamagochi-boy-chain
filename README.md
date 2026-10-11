@@ -25,5 +25,5 @@ it turned out just like how i imagined it its so sick
 
 # How to build:
 
-For screws and similar items, it is recommended to find the cheapest in your location. first 3d print all the parts in the cad folder except for the assembly, buy the pcb, flash the esp32, solder all the components on your pcb, put your finished pcb inside the case and screw it shut and voila 
+For screws and similar items, it is recommended to find the cheapest in your location. first 3d print all the parts in the cad folder except for the assembly, buy the pcb, flash the esp32, solder all the components on your pcb,charge your battery and put it in its spot, put your finished pcb inside the case and screw it shut and voila 
 # Zine
