@@ -1,0 +1,1 @@
+# tamagochi-boy-chain
