@@ -27,42 +27,32 @@ enum View {
   MENU_VIEW,
   STATS_VIEW,
 };
-// =========================== BEGINNER SETTINGS ===========================
-// Everything most builders will want to customize is in this one section.
-
-// --- Your board's pins ----------------------------------------------------
-// These are ESP32-C3 GPIO numbers, with the XIAO pin labels beside them.
-const int I2C_SDA_PIN = D5;       // XIAO D4: OLED + MPU6050 SDA
-const int I2C_SCL_PIN = D4;       // XIAO D5: OLED + MPU6050 SCL
+const int I2C_SDA_PIN = D5;      
+const int I2C_SCL_PIN = D4;       
 const int SPI_SCK_PIN = D8;
 const int SPI_MOSI_PIN = D10;
 const int SPI_CS_PIN = D7;
 const int SPI_DC_PIN = D6;
 const int SPI_RST_PIN = D0;
-const int DHT_PIN = D1;           // XIAO D1: DHT11 data
-const int BUTTON_ONE_PIN = D2;    // XIAO D2: opens/confirms the radial menu
-const int BUTTON_TWO_PIN = D3;    // XIAO D3: shows/hides stats
+const int DHT_PIN = D1;          
+const int BUTTON_ONE_PIN = D2;   
+const int BUTTON_TWO_PIN = D3;    
 
-// Set this to false if your submission does not have a DHT11.
+
 const bool USE_DHT11 = true;
 
-// Most parts use these addresses. Only change them if an I2C scanner says
-// your part is different (common OLED alternative: 0x3D).
+
 const uint8_t MPU6050_ADDRESS = 0x68;
 
-// --- Starting stats -------------------------------------------------------
-// Stats are 0 to 100. They only change when you select an action or shake
-// Starbie; nothing slowly drains while it sits on your desk.
+
 const int STARTING_JOY = 70;
 const int STARTING_ENERGY = 75;
 const int STARTING_FULLNESS = 65;
 
-// Set true, upload once, then set it back to false if you want a fresh pet.
+
 const bool RESET_SAVED_PET_ON_BOOT = false;
 
-// --- Radial menu ----------------------------------------------------------
-// These four actions appear at TOP, RIGHT, BOTTOM, then LEFT in the menu.
-// The last word controls the matching little visual reaction.
+
 enum PetReaction {
   NAP_REACTION,
   JUMP_REACTION,
@@ -79,40 +69,32 @@ struct MenuItem {
 };
 
 const MenuItem MENU_ITEMS[] = {
-  {"NAP",   1,  18, -4, NAP_REACTION},   // top: sleep and emit Zs
-  {"PLAY", 12, -9, -5, RUN_REACTION},    // right: two fast laps + hearts
-  {"FEED",  3,  2,  18, JUMP_REACTION},  // bottom: wiggle and jump
-  {"PET",   7,  0,  0, HEART_REACTION},  // left: jump and emit hearts
+  {"NAP",   1,  18, -4, NAP_REACTION},   
+  {"PLAY", 12, -9, -5, RUN_REACTION},   
+  {"FEED",  3,  2,  18, JUMP_REACTION}, 
+  {"PET",   7,  0,  0, HEART_REACTION},  
 };
 const int MENU_ITEM_COUNT = sizeof(MENU_ITEMS) / sizeof(MENU_ITEMS[0]);
 
-// --- Movement feel --------------------------------------------------------
-// Bigger MENU_TILT_LIMIT makes the menu ball move less.
+
 const float MENU_TILT_LIMIT = 6.0f;
 
-// MPU6050 orientation: change these settings instead of rewiring your board.
-// 1. If the sensor is turned 90 degrees, set SWAP_MPU_AXES to true.
-// 2. If a direction feels backwards, change that direction from 1.0f to -1.0f.
+
 const bool SWAP_MPU_AXES = false;
 const float MENU_X_DIRECTION = 1.0f;
 const float MENU_Y_DIRECTION = -1.0f;
 
-// A small dead zone makes the ball rest in the center until the board is tilted.
+
 const float MENU_CENTER_DEADZONE = 0.8f;
 const float SHAKE_THRESHOLD = 7.0f;
 
-// Shake is the only movement that has an effect outside the radial menu.
+
 const int SHAKE_JOY_CHANGE = 5;
 const int SHAKE_ENERGY_CHANGE = -2;
 const int SHAKE_FULLNESS_CHANGE = -1;
 
-// --- Your pet's bitmap and animation -------------------------------------
-// This is a simplified 32 by 32, one-bit version of the supplied character.
-// You can replace it with your own art later; keep these size values matched
-// to the sprite array you paste in.
-// The pet wanders unless it is asleep. A non-nap action does a tiny shake,
-// then a jump, except PLAY which runs two fast laps.
-const uint32_t NAP_DURATION_MS = 48000;  // 48 seconds: four times the old nap.
+
+const uint32_t NAP_DURATION_MS = 48000;  
 const uint16_t HEARTS_DURATION_MS = 1600;
 const uint16_t PLAY_LAP_MS = 800;
 const uint8_t PLAY_LAP_COUNT = 2;
@@ -121,7 +103,7 @@ const int FRAME_H = 64;
 const int FRAME_SCALE = 2;
 const int FRAME_X = (240 - FRAME_W * FRAME_SCALE)/2;
 const int FRAME_Y = (240 - FRAME_H * FRAME_SCALE)/2;
-//paste the animation frames individually later: idle0[]={}
+
 const uint8_t idle0 [] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -843,9 +825,7 @@ const uint8_t* const PLAY_FRAMES[] = {play0,play1, play2, play1,play2};
 const uint8_t* const FEED_FRAMES[] = {feed0,feed1, feed2, feed3, feed4,feed3,feed4};
 const uint8_t* const PET_FRAMES[] = {pet0,pet1, pet2, pet3};
 const uint8_t* const SHAKE_FRAMES[] = {shake0,shake1, shake2, shake3};
-// Each byte stores eight pixels, left to right. This sparse outline keeps the
-// supplied creature readable on a tiny, one-bit OLED: head, eye, legs, tail,
-// and a small flower-like ear accent all stay separate instead of becoming a blob.
+
 struct Animation {
   const uint8_t* const* frames;
   uint8_t frameCount;
@@ -881,9 +861,7 @@ const uint8_t* currentFrame(uint32_t now){
   }
   return currentAnim->frames[index];
 }
-// ===========================================================================
-// You can read below without needing to understand every line. The rest of
-// the sketch handles buttons, sensors, drawing, and saving automatically.
+
 
 const int SCREEN_WIDTH = 240;
 const int SCREEN_HEIGHT = 240;
@@ -974,7 +952,7 @@ void setUpButton(ButtonState &button) {
   button.lastChangedAt = millis();
 }
 
-// Returns true exactly once for each press, even if the switch bounces.
+
 bool wasPressed(ButtonState &button) {
   const bool rawState = digitalRead(button.pin);
   const uint32_t now = millis();
@@ -1036,17 +1014,16 @@ bool isPlaying() {
 }
 void updatePetTimers() {
   if (nappingUntil != 0 && !isNapping()) {
-    nappingUntil = 0;  // The pet wakes naturally when its nap time is over.
+    nappingUntil = 0;  
     playAnimation(IDLE_ANIM);
   }
   if (playRunStartedAt != 0 && !isPlaying()) {
-    playRunStartedAt = 0;  // PLAY is exactly two left-to-right-to-left laps.
+    playRunStartedAt = 0; 
     playAnimation(IDLE_ANIM);
   }
 }
 
-// While the menu is open, the MPU6050 acts like a tiny air mouse. The position
-// at the instant Button 1 opens the menu becomes the center for that menu use.
+
 void updateMenuBall() {
   float xTilt = accelerationX - menuCenterAccelerationX;
   float yTilt = accelerationY - menuCenterAccelerationY;
@@ -1061,18 +1038,17 @@ void updateMenuBall() {
   const float targetX = MENU_CENTER_X + (xTilt / MENU_TILT_LIMIT) * MENU_BALL_X_RANGE;
   const float targetY = MENU_CENTER_Y + (yTilt / MENU_TILT_LIMIT) * MENU_BALL_Y_RANGE;
 
-  // This small amount of smoothing makes the ball feel less jittery.
+  
   menuBallX += (targetX - menuBallX) * 0.20f;
   menuBallY += (targetY - menuBallY) * 0.20f;
 
-  // The menu has four full sectors, not four tiny targets. Any tilt direction
-  // past the center dead zone selects its matching top/right/bottom/left action.
+  
   if (fabsf(xTilt) < MENU_CENTER_DEADZONE && fabsf(yTilt) < MENU_CENTER_DEADZONE) {
     selectedMenuItem = -1;
   } else if (fabsf(xTilt) > fabsf(yTilt)) {
-    selectedMenuItem = xTilt > 0.0f ? 1 : 3;  // right or left
+    selectedMenuItem = xTilt > 0.0f ? 1 : 3;  
   } else {
-    selectedMenuItem = yTilt > 0.0f ? 2 : 0;  // bottom or top
+    selectedMenuItem = yTilt > 0.0f ? 2 : 0;  
   }
 }
 
@@ -1088,7 +1064,7 @@ void checkForShake() {
   if (fabsf(magnitude - STANDARD_GRAVITY) >= SHAKE_THRESHOLD &&
       now - lastShakeAt >= SHAKE_COOLDOWN_MS) {
     lastShakeAt = now;
-    nappingUntil = 0;  // A shake wakes a sleeping pet right away.
+    nappingUntil = 0;  
     playAnimation(SHAKE_ANIM);
     changePet(SHAKE_JOY_CHANGE, SHAKE_ENERGY_CHANGE, SHAKE_FULLNESS_CHANGE);
     savePet();
@@ -1100,14 +1076,14 @@ void openMenu() {
   selectedMenuItem = -1;
   menuBallX = MENU_CENTER_X;
   menuBallY = MENU_CENTER_Y;
-  // Calibrate here so every menu starts from however the builder is holding it.
+  
   menuCenterAccelerationX = accelerationX;
   menuCenterAccelerationY = accelerationY;
 }
 
 void chooseMenuItem() {
   if (selectedMenuItem == -1) {
-    return;  // Keep the menu open until the ball reaches a choice.
+    return; 
   }
 
   const MenuItem &item = MENU_ITEMS[selectedMenuItem];
@@ -1140,13 +1116,13 @@ void handleButtons() {
   }
 
   if (wasPressed(buttonTwo)) {
-    // Button 2 never changes the pet. It only lets you peek at the values.
+   
     currentView = currentView == STATS_VIEW ? PET_VIEW : STATS_VIEW;
   }
 }
 
 void drawHeart(int x, int y) {
-  // A tiny seven-pixel-wide heart that stays crisp on the OLED.
+  
   display.fillRect(x - 2, y, 2, 2, 0xFFFF);
   display.fillRect(x + 1, y, 2, 2, 0xFFFF);
   display.fillRect(x - 3, y + 2, 7, 2, 0xFFFF);
@@ -1168,7 +1144,7 @@ void drawHearts(uint32_t now, int petX, int petY) {
 }
 
 void drawSleepZs(uint32_t now, int petX, int petY) {
-  // The Zs float upward, then loop back down while the pet is napping.
+  
   const int rise = static_cast<int>((now / 300UL) % 15UL)*2;
   display.setTextSize(2);
   display.setTextColor(0xFFFF);
@@ -1213,7 +1189,7 @@ void drawMenuItem(int item) {
 
 void drawMenu() {
   display.fillScreen(0);
-  // The two diagonal lines divide the screen into four big selection sectors.
+  
   display.drawLine(0, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1, 0xFFFF);
   display.drawLine(0, SCREEN_HEIGHT - 1, SCREEN_WIDTH - 1, 0, 0xFFFF);
   for (int item = 0; item < MENU_ITEM_COUNT; item++) {
