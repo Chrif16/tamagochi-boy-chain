@@ -9,7 +9,9 @@ he has two buttons on his hands to control his expressions and to see his stats 
 
 # First concept
 <img width="750" height="713" alt="image" src="https://github.com/user-attachments/assets/14879613-4b57-48aa-a9b2-f800d64ffa87" />
+
 it turned out just like how i imagined it its so sick
+
 # Schematics
 <img width="1372" height="762" alt="image" src="https://github.com/user-attachments/assets/82fcb963-d840-42f6-ac06-7ecb9af11856" />
 
