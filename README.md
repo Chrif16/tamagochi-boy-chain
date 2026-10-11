@@ -1,5 +1,7 @@
 # chamabochi
 a little guy you can put on a chain that increases your swag tenfold but you have to take care of him
+<img width="3508" height="4960" alt="zine pcb" src="https://github.com/user-attachments/assets/9f0c5e9e-1ba8-48c0-bb18-aa5fe1b34c06" />
+
 <img width="1920" height="632" alt="case" src="https://github.com/user-attachments/assets/8a839a72-cc9f-401c-8010-760675b62999" />
 
 # Features
@@ -30,3 +32,4 @@ it turned out just like how i imagined it its so sick
 
 For screws and similar items, it is recommended to find the cheapest in your location. first 3d print all the parts in the cad folder except for the assembly, buy the pcb, flash the esp32, solder all the components on your pcb,charge your battery and put it in its spot, put your finished pcb inside the case and screw it shut and voila 
 # Zine
+<img width="3508" height="4960" alt="zine pcb" src="https://github.com/user-attachments/assets/544f8592-7f6b-4b63-a9ed-0e321809e3a4" />
