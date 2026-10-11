@@ -15,6 +15,9 @@ it turned out just like how i imagined it its so sick
 # Schematics
 <img width="1372" height="762" alt="image" src="https://github.com/user-attachments/assets/82fcb963-d840-42f6-ac06-7ecb9af11856" />
 
+# PCB
+
+<img width="922" height="697" alt="image" src="https://github.com/user-attachments/assets/94a24d93-1e42-48d8-bf72-7515eac3a677" />
 
 
 # 3D model
