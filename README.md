@@ -1,5 +1,5 @@
 # chamabochi
-a little guy you can put on a chain that increases your swag tenfold but you have to take care of him
+a little guy you can put on a chain that increases your swag tenfold but you have to take care of him. i made him as part fashion accessory part useful gadget that detects humidity and part fun game/fidget toy you can play with. 
 <img width="3508" height="4960" alt="zine pcb" src="https://github.com/user-attachments/assets/9f0c5e9e-1ba8-48c0-bb18-aa5fe1b34c06" />
 
 <img width="1920" height="632" alt="case" src="https://github.com/user-attachments/assets/8a839a72-cc9f-401c-8010-760675b62999" />
@@ -10,19 +10,22 @@ he comes equiped with a gyroscope and a humidity and temperature sensor so he ca
 he has two buttons on his hands to control his expressions and to see his stats plus you can control the menu by tilting the gyroscope. 
 
 # First concept
+i was inspired by the firmware part of the starbie project to make a mini pcb companion 
 <img width="750" height="713" alt="image" src="https://github.com/user-attachments/assets/14879613-4b57-48aa-a9b2-f800d64ffa87" />
 
 it turned out just like how i imagined it its so sick
 
 # Schematics
+he has really small components that i tried to fit in together so that i can wire them properly
 <img width="1372" height="762" alt="image" src="https://github.com/user-attachments/assets/82fcb963-d840-42f6-ac06-7ecb9af11856" />
 
 # PCB
-
+i struggeled a bit with making his outline in edge cuts but i think it turned out fine + the wiring is flawless.
 <img width="922" height="697" alt="image" src="https://github.com/user-attachments/assets/94a24d93-1e42-48d8-bf72-7515eac3a677" />
 
 
 # 3D model
+i made it in two parts so you can assemble the pcb first then put it in the case and close the lid + it has a hole to fit a chain through
 <img width="1455" height="658" alt="image" src="https://github.com/user-attachments/assets/bfe2a612-73fd-4583-a85b-944b20401b51" /><img width="1060" height="632" alt="image" src="https://github.com/user-attachments/assets/35ed291e-faa9-4578-ac1f-655170900268" />
 <img width="1826" height="791" alt="image" src="https://github.com/user-attachments/assets/63721268-1e94-4b00-af98-df96cef40426" />
 
