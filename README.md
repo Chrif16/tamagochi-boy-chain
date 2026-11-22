@@ -21,7 +21,8 @@ he has really small components that i tried to fit in together so that i can wir
 
 # PCB
 i struggeled a bit with making his outline in edge cuts but i think it turned out fine + the wiring is flawless.
-<img width="922" height="697" alt="image" src="https://github.com/user-attachments/assets/94a24d93-1e42-48d8-bf72-7515eac3a677" />
+<img width="1017" height="791" alt="image" src="https://github.com/user-attachments/assets/84f9265d-40dd-4b6c-a567-9d3b510eea34" />
+
 
 
 # 3D model
